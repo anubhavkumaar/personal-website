@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tags */
+.react {
+  border: 0.1rem solid rgb(97, 218, 251);
+}
+.react:hover {
+  background: rgba(97, 218, 251, 0.25);
+}
+
+.react-native {
+  border: 0.1rem solid rgb(97, 218, 251);
+}
+.react-native:hover {
+  background: rgba(97, 218, 251, 0.25);
+}
+
+.node {
+  border: 0.1rem solid rgb(131, 205, 41);
+}
+.node:hover {
+  background: rgba(131, 205, 41, 0.25);
+}
+
+.mongodb {
+  border: 0.1rem solid rgb(67, 153, 52);
+}
+.mongodb:hover {
+  background: rgba(67, 153, 52, 0.25);
+}
+
+.redux {
+  border: 0.1rem solid rgb(118, 74, 188);
+}
+.redux:hover {
+  background: rgba(118, 74, 188, 0.25);
+}
+
+.razorpay {
+  border: 0.1rem solid rgb(82, 143, 240);
+}
+.razorpay:hover {
+  background: rgba(82, 143, 240, 0.25);
+}
+
+.material-ui {
+  border: 0.1rem solid rgb(25, 118, 210);
+}
+.material-ui:hover {
+  background: rgba(25, 118, 210, 0.25);
+}
+
+.bulma {
+  border: 0.1rem solid rgb(0, 209, 178);
+}
+.bulma:hover {
+  background: rgb(0, 209, 178, 0.25);
+}
+
+.next {
+  border: 2px solid rgb(0, 112, 243);
+}
+.next:hover {
+  background: rgba(0, 112, 243, 0.25);
+}
+
+.tailwind {
+  border: 2px solid rgb(6, 182, 212);
+}
+.tailwind:hover {
+  background: rgba(6, 182, 212, 0.25);
+}
+
+.react-query {
+  border: 2px solid rgb(255, 65, 84);
+}
+.react-query:hover {
+  background: rgba(255, 65, 84, 0.25);
+}
+
+.css-modules {
+  border: 2px solid rgb(21, 114, 182);
+}
+.css-modules:hover {
+  background: rgba(21, 114, 182, 0.25);
+}
+.python {
+  border: 0.1rem solid rgb(0, 123, 255);
+}
+.python:hover {
+  background: rgba(0, 123, 255, 0.25);
+}
+
+.sql {
+  border: 0.1rem solid rgb(255, 51, 51);
+}
+.sql:hover {
+  background: rgba(255, 51, 51, 0.25);
+}
+
+.javascript {
+  border: 0.1rem solid rgb(255, 221, 0);
+}
+.javascript:hover {
+  background: rgba(255, 221, 0, 0.25);
+}
+
+.java {
+  border: 0.1rem solid rgb(255, 102, 0);
+}
+.java:hover {
+  background: rgba(255, 102, 0, 0.25);
+}
+
+.cpp {
+  border: 0.1rem solid rgb(0, 102, 204);
+}
+.cpp:hover {
+  background: rgba(0, 102, 204, 0.25);
+}
+
+.git {
+  border: 0.1rem solid rgb(255, 51, 0);
+}
+.git:hover {
+  background: rgba(255, 51, 0, 0.25);
+}
+
+.github {
+  border: 0.1rem solid rgb(0, 0, 0);
+}
+.github:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.aws {
+  border: 0.1rem solid rgb(255, 153, 0);
+}
+.aws:hover {
+  background: rgba(255, 153, 0, 0.25);
+}
+
+.sqlite {
+  border: 0.1rem solid rgb(0, 153, 204);
+}
+.sqlite:hover {
+  background: rgba(0, 153, 204, 0.25);
+}
+
+.numpy {
+  border: 0.1rem solid rgb(102, 153, 255);
+}
+.numpy:hover {
+  background: rgba(102, 153, 255, 0.25);
+}
+
+.pandas {
+  border: 0.1rem solid rgb(0, 204, 153);
+}
+.pandas:hover {
+  background: rgba(0, 204, 153, 0.25);
+}
+
+.beautifulsoup4 {
+  border: 0.1rem solid rgb(153, 102, 255);
+}
+.beautifulsoup4:hover {
+  background: rgba(153, 102, 255, 0.25);
+}
+
+.seaborn {
+  border: 0.1rem solid rgb(255, 153, 51);
+}
+.seaborn:hover {
+  background: rgba(255, 153, 51, 0.25);
+}
+
+.oracle-cloud {
+  border: 0.1rem solid rgb(255, 87, 34);
+}
+.oracle-cloud:hover {
+  background: rgba(255, 87, 34, 0.25);
+}
