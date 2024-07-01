@@ -8,12 +8,12 @@ Welcome to my portfolio website! This website serves as a comprehensive showcase
 
 ## Table of Contents
 
-- [Home](avegganorkar.com)
-- [About](avegganorkar.com/about)
-- [Projects](avegganorkar.com/projects)
-- [Skills](avegganorkar.com/articles)
-- [Contact](avegganorkar.com/contact)
-- [GitHub](avegganorkar.com/github)
+- [Home]
+- [About]
+- [Projects]
+- [Skills]
+- [Contact]
+- [GitHub]
 
 ## Home
 
