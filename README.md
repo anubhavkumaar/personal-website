@@ -27,14 +27,6 @@ In the About section, you can learn more about my background, education, and pro
 
 The Projects section showcases a curated list of my most significant projects. Each project includes a detailed description, technologies used, and links to live demos or repositories where applicable. This section demonstrates my ability to apply my skills in real-world scenarios.
 
-## Skills
-
-In the Skills section, I outline my technical proficiencies and competencies. This includes programming languages, frameworks, tools, and methodologies that I am proficient in. This section provides a clear view of my capabilities and areas of expertise.
-
-## Certifications
-
-The Certifications section lists my professional certifications and achievements. Each certification entry includes the issuing organization, date of issuance, and a brief description of what the certification entails.
-
 ## Contact
 
 The Contact section provides various ways to get in touch with me. This includes a contact form for direct messages, as well as links to my professional profiles on LinkedIn, Twitter, and other relevant platforms.
