@@ -189,3 +189,23 @@
 .oracle-cloud:hover {
   background: rgba(255, 87, 34, 0.25);
 }
+.docker {
+  border: 0.1rem solid rgb(97, 218, 251);
+}
+.docker:hover {
+  background: rgba(97, 218, 251, 0.25);
+}
+
+.nextjs {
+  border: 0.1rem solid rgb(97, 251, 138);
+}
+.nextjs:hover {
+  background: rgba(97, 251, 105, 0.25);
+}
+
+.html {
+  border: 0.1rem solid rgb(97, 251, 138);
+}
+.html:hover {
+  background: rgba(97, 251, 105, 0.25);
+}

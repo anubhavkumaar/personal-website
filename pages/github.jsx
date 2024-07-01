@@ -68,13 +68,15 @@ export async function getStaticProps() {
       },
     }
   );
+  let allowedRepo = ["DarakhTech/India-State-Cities-Database","DarakhTech/OCR-Calculus","DarakhTech/PH526x-Hardvard-Using-Python-for-Research","DarakhTech/React-Admin-Dashboard-public","DarakhTech/Save-As-PDF","DarakhTech/visa-autofill-security-questions-extension","DarakhTech/Web-Scrapping-Python","DarakhTech/yt-chat-analysis"]
   let repos = await repoRes.json();
 
   // Ensure repos is an array
   if (Array.isArray(repos)) {
     repos = repos
-      .sort((a, b) => b.stargazers_count - a.stargazers_count)
-      .slice(0, 6);
+      .filter(r => allowedRepo.includes(r.full_name))
+      .sort((a, b) => b.full_name - a.full_name)
+      .slice(0, 8);
   } else {
     console.error('Fetched repos data is not an array:', repos);
     repos = [];

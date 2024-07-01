@@ -29,7 +29,7 @@ const sidebarTopItems = [
   },
   {
     Icon: GithubIcon,
-    path: 'https://github.com/Darakhtech',
+    path: '/github',
     external: true
   },
 ];

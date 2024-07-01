@@ -1,26 +1,42 @@
 import ProjectCard from '../components/ProjectCard';
-import { getProjects } from './api/projects';
 import styles from '../styles/ProjectsPage.module.css';
+import { getProjects } from './api/projects';
 
 const ProjectsPage = ({ projects }) => {
   return (
     <>
       <h3>Stuff I've Built So Far</h3>
       <div className={styles.container}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))
+        ) : (
+          <p>Unable to Load Project: 502</p>
+        )}
       </div>
     </>
   );
 };
 
 export async function getStaticProps() {
-  const projects = getProjects();
-
-  return {
-    props: { title: 'Projects', projects },
-  };
+  try {
+    const projects = await getProjects();
+    return {
+      props: {
+        title: "Projects",
+        projects,
+      },
+      revalidate: 10,
+    };
+  } catch (err) {
+    console.error("Error in getStaticProps:", err);
+    return {
+      props: {
+        projects: [],
+      },
+    };
+  }
 }
 
 export default ProjectsPage;

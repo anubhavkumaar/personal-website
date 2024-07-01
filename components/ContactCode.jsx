@@ -3,8 +3,8 @@ import styles from '../styles/ContactCode.module.css';
 const contactItems = [
   {
     social: 'website',
-    link: 'darakhtech.github.io',
-    href: 'darakhtech.github.io',
+    link: 'avegganorkar.com',
+    href: 'https://avegganorkar.com',
   },
   {
     social: 'email',

@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "OCR to Calculus Solution",
-    "image": "https://imgur.com/b74tMRG.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/8/89/Pure-mathematics-formul%C3%A6-blackboard.jpg",
     "description": "Developed a mobile application to solve mathematical problems with Polynomial and Calculus equations.",
     "tags": ["python", "mongodb","node", "react-native"],
     "source_code": "https://github.com/DarakhTech/OCR-Calculus"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "YouTube Live Chat Analysis",
-    "image": "https://i.imgur.com/FwUCnbF.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/54/YouTube_dark_logo_2017.svg",
     "description": "Developed a real-time sentiment analysis system for YouTube live streams, providing valuable insights to content creators.",
     "tags": ["python", "node", "mongodb"],
     "source_code": "https://github.com/DarakhTech/yt-chat-analysis"
@@ -18,7 +18,7 @@
   {
     "id": 3,
     "name": "Online Video Lecture Summarization",
-    "image": "https://imgur.com/XcMT1mH.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Google_Meet_icon_%282020%29.svg",
     "description": "Developed an automated online video lecture summarization system using JavaScript, Python, and the Lex Rank algorithm.",
     "tags": ["javascript", "python", "mongodb"],
     "source_code": "https://github.com/sujal0930/google-meet-summarizer"
@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Save as PDF - Chrome Extension",
-    "image": "https://imgur.com/WcLe1EJ.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Crystal_Clear_mimetype_pdf.png",
     "description": "A simple Chrome extension that allows you to download the current webpage as a PDF with a specific name.",
     "tags": ["javascript", "html"],
     "source_code": "https://github.com/DarakhTech/Save-As-PDF"
@@ -34,10 +34,19 @@
   {
     "id": 5,
     "name": "Autofill Visa Security Questions",
-    "image": "https://imgur.com/PrR73dO.png",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/b/b9/USA_Visa_-_Arg.jpg",
     "description": "A Chrome extension to simplify Visa scheduling login process. This tool auto-fills your security question answers, making your login experience quick and hassle-free.",
     "tags": ["javascript", "html"],
     "source_code": "https://github.com/DarakhTech/visa-autofill-security-questions-extension"
+  },
+  {
+    "id": 6,
+    "name": "Portfolio",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/af/VS-Code_HTML-Sample.png",
+    "description": "A portfolio website project showcasing the integration of Nginx, Docker, Oracle Cloud, and Next.js to master modern hosting and deployment techniques.",
+    "tags": ["docker", "nextjs","oracle-cloud"],
+    "demo": "/"
   }
 
 ]
+
