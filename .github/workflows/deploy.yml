@@ -21,6 +21,14 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: 'Create env file'
+      run: |
+        touch .env
+        echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
+        echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
+        echo NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }} >> .env
+        cat .env
+    
     - name: Build project
       env:
         API_KEY_GITHUB: ${{ secrets.API_KEY_GITHUB }}
@@ -53,10 +61,11 @@ jobs:
         script: |
           cd vscode-portfolio
           git pull origin main
-          echo "${{ secrets.ENV_BASE64 }}" | base64 --decode > .env
-          export API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }}
-          export NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
-          export NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }}
+          touch .env
+          echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
+          echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
+          echo NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }} >> .env
+          cat .env
           npm install
 
   restart:
@@ -72,8 +81,10 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
           cd vscode-portfolio
-          export API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }}
-          export NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }}
-          export NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }}
+          touch .env
+          echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
+          echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
+          echo NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }} >> .env
+          cat .env
           npm run build
           pm2 restart all
