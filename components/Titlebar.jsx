@@ -26,7 +26,7 @@ const Titlebar = () => {
   };
 
   const handleMenuClick = () => {
-    showToast("Hmmm Exploring! Couldn't thing what can be added in dropdown", 'success');
+    showToast("Hmmm Exploring! Couldn't think what can be added in dropdown", 'success');
   };
 
   const menuItems = ['File', 'Edit', 'View', 'Go', 'Run', 'Terminal', 'Help'];

@@ -29,24 +29,24 @@ const GithubPage = ({ repos, user }) => {
           <h3 className={styles.username}>{user.login}</h3>
         </div>
         <div>
-          <h3>{user.public_repos} repos</h3>
+          <h3>{user.public_repos} public repos</h3>
         </div>
         <div>
-          <h3>{user.followers} followers</h3>
+          <h3>22 private repos</h3>
         </div>
-      </div>
-      <div className={styles.container}>
-        {repos.map((repo) => (
-          <RepoCard key={repo.id} repo={repo} />
-        ))}
       </div>
       <div className={styles.contributions}>
         <GitHubCalendar
           username={githubUsername}
           theme={theme}
           hideColorLegend
-          hideMonthLabels
+          showWeekdayLabels
         />
+      </div>
+      <div className={styles.container}>
+        {repos.map((repo) => (
+          <RepoCard key={repo.id} repo={repo} />
+        ))}
       </div>
     </>
   );
@@ -73,7 +73,7 @@ export async function getStaticProps() {
       },
     }
   );
-  let allowedRepo = ["DarakhTech/India-State-Cities-Database","DarakhTech/OCR-Calculus","DarakhTech/PH526x-Hardvard-Using-Python-for-Research","DarakhTech/React-Admin-Dashboard-public","DarakhTech/Save-As-PDF","DarakhTech/visa-autofill-security-questions-extension","DarakhTech/Web-Scrapping-Python","DarakhTech/yt-chat-analysis"]
+  let allowedRepo = ["DarakhTech/Discord-Helper-Bot", "DarakhTech/vscode-portfolio", "DarakhTech/India-State-Cities-Database","DarakhTech/OCR-Calculus","DarakhTech/PH526x-Hardvard-Using-Python-for-Research","DarakhTech/Save-As-PDF","DarakhTech/visa-autofill-security-questions-extension","DarakhTech/Web-Scrapping-Python","DarakhTech/yt-chat-analysis"]
   let repos = await repoRes.json();
 
   // Ensure repos is an array

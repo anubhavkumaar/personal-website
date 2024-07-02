@@ -38,6 +38,16 @@
   margin-bottom: 1.5rem;
 }
 
+.contributions {
+  background: var(--article-bg);
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100px; */
+  margin-bottom: 1.5rem;
+}
+
 .contributions article {
   width: 100% !important;
 }
