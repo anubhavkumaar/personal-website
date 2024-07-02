@@ -40,5 +40,6 @@ next-env.d.ts
 #ENV
 .env.development
 .env.production
-
+.env
+cred.txt
 # End of https://www.toptal.com/developers/gitignore/api/nextjs

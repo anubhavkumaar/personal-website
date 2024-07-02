@@ -11,6 +11,9 @@ const GithubPage = ({ repos, user }) => {
     level3: '#26a641',
     level4: '#39d353',
   };
+  const githubApiKey = process.env.API_KEY_GITHUB;
+  const githubUsername = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
+
 
   return (
     <>
@@ -39,7 +42,7 @@ const GithubPage = ({ repos, user }) => {
       </div>
       <div className={styles.contributions}>
         <GitHubCalendar
-          username={process.env.NEXT_PUBLIC_GITHUB_USERNAME}
+          username={githubUsername}
           theme={theme}
           hideColorLegend
           hideMonthLabels
@@ -51,20 +54,20 @@ const GithubPage = ({ repos, user }) => {
 
 export async function getStaticProps() {
   const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+    `https://api.github.com/users/${githubUsername}`,
     {
       headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        Authorization: `token ${githubApiKey}`,
       },
     }
   );
   const user = await userRes.json();
 
   const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
+    `https://api.github.com/users/${githubUsername}/repos?per_page=100`,
     {
       headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        Authorization: `token ${githubApiKey}`,
       },
     }
   );
