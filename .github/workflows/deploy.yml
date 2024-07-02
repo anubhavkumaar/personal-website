@@ -24,7 +24,6 @@ jobs:
     - name: 'Create env file'
       run: |
         pwd
-        cd vscode-portfolio
         touch .env
         echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
         echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
