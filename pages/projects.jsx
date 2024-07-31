@@ -22,6 +22,7 @@ const ProjectsPage = ({ projects }) => {
 export async function getStaticProps() {
   try {
     const projects = await getProjects();
+    projects.sort((a, b) => b.seq - a.seq);
     return {
       props: {
         title: "Projects",
