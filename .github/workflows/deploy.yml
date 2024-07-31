@@ -37,21 +37,21 @@ jobs:
         NEXT_PUBLIC_GITHUB_USERNAME: ${{secrets.NEXT_PUBLIC_GITHUB_USERNAME}}
       run: npm run build
 
-    - name: Upload build artifacts
-      uses: actions/upload-artifact@v2
-      with:
-        name: build-artifacts
-        path: .
+    # - name: Upload build artifacts
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: build-artifacts
+    #     path: .
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download build artifacts
-      uses: actions/download-artifact@v2
-      with:
-        name: build-artifacts
+    # - name: Download build artifacts
+    #   uses: actions/download-artifact@v2
+    #   with:
+    #     name: build-artifacts
 
     - name: Deploy to Oracle VPS
       uses: appleboy/ssh-action@v0.1.4
