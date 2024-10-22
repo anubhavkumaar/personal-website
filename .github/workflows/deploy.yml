@@ -23,7 +23,6 @@ jobs:
 
     - name: 'Create env file'
       run: |
-        pwd
         touch .env
         echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
         echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
@@ -32,28 +31,17 @@ jobs:
     
     - name: Build project
       env:
-        API_KEY_GITHUB: ${{secrets.API_KEY_GITHUB}}
-        NEXT_PUBLIC_API_URL: ${{secrets.NEXT_PUBLIC_API_URL}}
-        NEXT_PUBLIC_GITHUB_USERNAME: ${{secrets.NEXT_PUBLIC_GITHUB_USERNAME}}
+        API_KEY_GITHUB: ${{ secrets.API_KEY_GITHUB }}
+        NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+        NEXT_PUBLIC_GITHUB_USERNAME: ${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }}
       run: npm run build
-
-    # - name: Upload build artifacts
-    #   uses: actions/upload-artifact@v2
-    #   with:
-    #     name: build-artifacts
-    #     path: .
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
-    # - name: Download build artifacts
-    #   uses: actions/download-artifact@v2
-    #   with:
-    #     name: build-artifacts
-
-    - name: Deploy to Oracle VPS
+    - name: Checkout code on VPS and deploy
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.VPS_IP }}
@@ -62,19 +50,24 @@ jobs:
         script: |
           cd vscode-portfolio
           git pull origin main
+          
+          # Create .env file on VPS
+          rm -f .env
           touch .env
           echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
           echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
           echo NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }} >> .env
           cat .env
+          
           npm install
+          pm2 reload all
 
   restart:
     needs: deploy
     runs-on: ubuntu-latest
 
     steps:
-    - name: Restart PM2 process
+    - name: Ensure PM2 process restart
       uses: appleboy/ssh-action@v0.1.4
       with:
         host: ${{ secrets.VPS_IP }}
@@ -82,11 +75,4 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
           cd vscode-portfolio
-          rm .env
-          touch .env
-          echo API_KEY_GITHUB=${{ secrets.API_KEY_GITHUB }} >> .env
-          echo NEXT_PUBLIC_API_URL=${{ secrets.NEXT_PUBLIC_API_URL }} >> .env
-          echo NEXT_PUBLIC_GITHUB_USERNAME=${{ secrets.NEXT_PUBLIC_GITHUB_USERNAME }} >> .env
-          cat .env
-          npm run build
           pm2 restart all
