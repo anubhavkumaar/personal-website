@@ -11,7 +11,8 @@ module.exports = {
       'www.crummy.com',
       'seaborn.pydata.org',
       'upload.wikimedia.org',
-      
     ],
   },
+  assetPrefix: '/personal-website/',
+  basePath: '/personal-website',
 };

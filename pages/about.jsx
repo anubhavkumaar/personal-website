@@ -9,7 +9,7 @@ const AboutPage = () => {
 
     <h3><br></br>🌱 I’m currently learning Data Science</h3>
     
-    <h3><br></br>📫 How to reach me avegganorkar@gmail.com</h3>
+    <h3><br></br>📫 How to reach me anubhavkumar@gmail.com</h3>
     </>
   );
 };

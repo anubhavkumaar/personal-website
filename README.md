@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-# personal-website
-personal website
-=======
 # Portfolio Website
 
-Welcome to my portfolio website! This website serves as a comprehensive showcase of my skills, projects, certifications, and professional journey. Built using modern web technologies such as Next.js and Express.js, it is hosted on Oracle Cloud and utilizes Docker for containerization. The deployment process is automated through a CI/CD pipeline implemented with GitHub Actions.
+Welcome to my portfolio website! This website serves as a comprehensive showcase of my skills, projects, certifications, and professional journey. Built using modern web technologies such as Next.js and Express.js, it is hosted on GitHub Pages and utilizes Docker for containerization. The deployment process is automated through a CI/CD pipeline implemented with GitHub Actions.
 
 ## Table of Contents
 
@@ -42,7 +38,7 @@ This portfolio website is built using the following technologies:
 - **Next.js:** For building the front-end and rendering React components on the server-side.
 - **Express.js:** For handling back-end routing and APIs.
 - **Docker:** For containerizing the application to ensure consistency across different environments.
-- **Oracle Cloud:** For hosting the application, providing scalability and reliability.
+- **GitHub Pages:** For hosting the application, providing scalability and reliability.
 - **GitHub Actions:** For implementing the CI/CD pipeline, automating the build, test, and deployment processes.
 
 ## Installation
@@ -66,6 +62,4 @@ To run this portfolio website locally, follow these steps:
 The application should now be running on http://localhost:3000.
 
 ## Deployment
-The deployment process is automated using GitHub Actions. Any push to the main branch triggers the CI/CD pipeline, which builds the Docker image, runs tests, and deploys the updated application to Oracle Cloud.
-
->>>>>>> ea3c7f5 (Create README.md)
+The deployment process is automated using GitHub Actions. Any push to the main branch triggers the CI/CD pipeline, which builds the Docker image, runs tests, and deploys the updated application to GitHub Pages.
